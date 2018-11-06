@@ -10,11 +10,17 @@ xset s 1800 1800
 # X mouse pointer fix
 xsetroot -cursor_name left_ptr
 
-# Run custom script on resolution change (for virtual machines)
-#~/.local/bin/xeventbind resolution ~/.local/bin/resize &
+# Run custom script on resolution change
+~/.local/bin/xeventbind resolution ~/.local/bin/resize &
+
+# Start xsettings daemon
+xsettingsd &
 
 # Load .Xresources
 xrdb -load ~/.Xresources &
+
+# Enable vmware copy/paste
+vmware-user &
 
 # Start hotkey daemon and bspwm
 sxhkd -m 1 -t 20 &
