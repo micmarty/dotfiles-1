@@ -60,7 +60,7 @@ bspc rule -a sun-awt-X11-XDialogPeer    state=floating
 ~/.fehbg &
 
 # Audio
-qjackctl &
+#qjackctl &
 
 # Composting manager
  ~/.config/compton/launch &
@@ -69,10 +69,10 @@ qjackctl &
 ~/.config/dunst/launch &
 
 # Disk manager
-~/.config/udiskie/launch &
+#~/.config/udiskie/launch &
 
 # Screen dimmer
-~/.config/redshift/launch &
+#~/.config/redshift/launch &
 
 # Panels
 sleep 5

@@ -39,10 +39,6 @@ padding-right = 2
 module-margin-left  = 0
 module-margin-right = 0
 
-modules-left = apps news
-modules-center = clock
-modules-right = weather now-playing
-
 wm-restack = bspwm
 
 locale = en_US.UTF-8
@@ -180,7 +176,7 @@ dpi = ${env:PM_DPI:110}
 
 modules-left = apps gap news
 modules-center = clock
-modules-right = redshift gap weather gap now-playing
+modules-right = weather
 
 font-1 = "Weather Icons:size=13;6"
 
@@ -238,13 +234,9 @@ bottom = true
 padding-left = 0
 padding-right = 0
 
-font-4 = "Spy Agency:pixelsize=12.75;4"
-font-5 = "Spy Agency Laser:pixelsize=12.75;4"
-font-6 = "Geforce:style=Bold:pixelsize=13.25;5"
-
 modules-left = bspwm gap-small title
 modules-center =
-modules-right = cpu-brand gap-small cpu-usage gap-small cpu-temp gap gpu-brand gap-small gpu-usage gap-small gpu-temp gap memory gap network gap filesystem gap updates gap power-menu gap
+modules-right = cpu-brand gap-small cpu-usage gap memory gap network gap filesystem gap updates gap power-menu gap
 
 tray-position = right
 tray-padding = 0
@@ -264,7 +256,7 @@ ws-icon-default = 
 
 [module/cpu-brand]
 type = custom/text
-content = %{T5}RYZ%{T-}%{T6}E%{T-}%{T5}N%{T-}
+content = CPU
 
 [module/cpu-usage]
 type = internal/cpu
@@ -322,7 +314,7 @@ label = %output%
 [module/memory]
 type = internal/memory
 interval = 5
-format-prefix = "LPX  "
+format-prefix = "MEM  "
 label = %percentage_used%%
 
 [module/filesystem]
@@ -337,7 +329,7 @@ label-unmounted-foreground = ${colors.alert}
 
 [module/network]
 type = internal/network
-interface = enp24s0
+interface = ens33
 
 interval = 5
 ping-interval = 0
